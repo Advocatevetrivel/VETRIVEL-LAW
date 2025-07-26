@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P.R.S. Vetrivel Law & Tax Associates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Base styles */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      color: #2c3e50;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: #1a1a1a;
+      padding: 15px 0;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header h1 { font-size: 1.8rem; margin: 0; }
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffdd57; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 40px;
+      background-size: cover;
+      background-position: center;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      animation: slideBackground 20s infinite;
+    }
+    @keyframes slideBackground {
+      0% { background-image: url('law1.jpg'); }
+      33% { background-image: url('law2.jpg'); }
+      66% { background-image: url('law3.jpg'); }
+      100% { background-image: url('law1.jpg'); }
+    }
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0,0, 0.55);
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+    .hero-text {
+      position: relative;
+      max-width: 600px;
+      color: #fff;
+      z-index: 1;
+    }
+    .hero-text h2 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      color: #ffdd57;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin: 5px 10px 0 0;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .btn i { margin-right: 8px; }
+    .btn { background: #ffdd57; color: #1a1a1a; }
+    .btn:hover { background: #e6c547; box-shadow: 0 6px 16px rgba(0,0,0,0.3); }
+    .btn-secondary {
+      background: #6c757d;
+      color: #fff;
+    }
+    .btn-secondary:hover {
+      background: #565e64;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid #d1d9e6;
+      text-align: center;
+    }
+    section h3 {
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 30px;
+    }
+    section p {
+      font-size: 1.1rem;
+      color: #3b3b3b;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Service Cards */
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px 30px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      transition: box-shadow 0.3s;
+      text-align: left;
+    }
+    .service-card:hover {
+      box-shadow: 0 9px 30px rgba(0,0,0,0.12);
+    }
+    .service-card h4 {
+      font-size: 1.4rem;
+      color: #1a237e;
+      margin-bottom: 12px;
+    }
+    .service-card ul {
+      list-style: disc inside;
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Contact */
+    .contact-info {
+      font-size: 1.1rem;
+      color: #3b3b3b;
+    }
+    .contact-info a {
+      color: #0d6efd;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-info a:hover { color: #084cdf; }
+    .contact-info i { color: #0d6efd; margin-right: 8px; }
+
+    /* Footer */
+    .footer {
+      background: #1a1a1a;
+      color: #ddd;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { flex-wrap: wrap; padding: 60px 20px; }
+      .hero-image { width: 100%; max-width: 280px; margin-top: 30px; }
+      nav a { margin-left: 15px; }
+    }
+    @media (max-width: 480px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      nav { margin-top: 15px; }
+      .btn { width: 100%; margin-top: 15px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1>P.R.S. Vetrivel Law & Tax Associates</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Guiding You on the Path to Justice</h2>
+      <p>Trusted legal and tax advice in Pennagaram — over 7 years of experience with integrity and empathy.</p>
+      <a class="btn" href="https://wa.me/9113590119" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> Book Consultation
+      </a>
+      <a class="btn btn-secondary" href="https://maps.google.com/?q=91/2,+Hogenakkal+Road,+Pennagaram" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-map-marker-alt"></i> Get Directions
+      </a>
+    </div>
+    <img class="hero-image" src="lawyer-photo.jpg" alt="Attorney Photo">
+  </div>
+
+  <main class="container">
+    <section id="about">
+      <h3>About Us</h3>
+      <p>P.R.S. Vetrivel Law & Tax Associates is a trusted law firm in Pennagaram, Dharmapuri. With 7+ years of experience across civil, family, property, tax, and criminal law, we deliver transparent and practical legal solutions with integrity.</p>
+    </section>
+
+    <section id="services">
+      <h3>Our Services</h3>
+      <div class="service-card">
+        <h4>Legal Consultation</h4>
+        <ul>
+          <li>Family, Civil, Criminal & Property Law</li>
+          <li>Litigation and Court Representation</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h4>Income Tax & GST</h4>
+        <ul>
+          <li>Income Tax Filing & TDS Compliance</li>
+          <li>GST Registration, Filing & Appeals</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h4>Document Registration & Drafting</h4>
+        <ul>
+          <li>Sale Deeds, Wills, Agreements</li>
+          <li>Patta Name Transfer, EC, Land Services</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> <a href="tel:+919113590119">+91 91135 90119</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> 91/2, Hogenakkal Road, Pennagaram, Dharmapuri</p>
+        <p><i class="fas fa-clock"></i> Monday – Saturday: 9:00 AM – 6:00 PM</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 P.R.S. Vetrivel Law & Tax Associates. All Rights Reserved.
+  </footer>
+</body>
+</html>
